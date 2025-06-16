@@ -11,7 +11,6 @@ class CountryServiceImpl implements CountryService {
     if (response.statusCode == 200) {
       final List<dynamic> data = jsonDecode(response.body);
 
-      // Mapeia para Country (ajuste conforme seu model)
       final countries = data.map((e) => Country.fromJson(e)).toList();
 
       final start = page * pageSize;
